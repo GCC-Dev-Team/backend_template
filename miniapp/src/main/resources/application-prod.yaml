@@ -1,0 +1,17 @@
+#spring:
+#  datasource:
+#    url: ##psql地址
+#    username: ##账号
+#    password: ##密码
+
+#mybatis:
+#  configuration:
+#    #        ??????????
+#    map-underscore-to-camel-case: true
+#  #mapper?xml?????
+#  mapper-locations: classpath:mapper/*.xml
+#  ##不设置包,找不到那个user类,传入参数的选择,就是insert标签的parameterType
+#  type-aliases-package: edumindai.model.entity
+
+
+

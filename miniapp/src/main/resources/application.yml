@@ -1,0 +1,20 @@
+spring:
+  profiles:
+    active: dev
+#logging:
+#  level:
+#    org.springframework.web: info
+#    com.github.binarywang.demo.wx.miniapp: debug
+#    cn.binarywang.wx.miniapp: debug
+#wx:
+#  miniapp:
+#    configs:
+#      - appid: wx03e1004904ac4ca6
+#        secret: 12da55786474ecd91f0dadfed67a2786
+#        token: xiaoli
+#        aesKey: xiaoli
+#        msgDataFormat: JSON
+
+    ##支付配置读取进去数据库了
+server:
+  port: 3003

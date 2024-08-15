@@ -1,0 +1,29 @@
+
+spring:
+  datasource:
+    type: com.zaxxer.hikari.HikariDataSource
+#    testWhileIdle : true
+#    testOnBorrow : true
+    url: jdbc:postgresql://114.132.67.226:5432/assistant_product
+    username: root
+    password: abC123456@
+
+  hikari:
+    auto-commit: true
+    connection-test-query: SELECT 1
+    connection-timeout: 10000
+    idle-timeout: 30000
+    max-lifetime: 400000 # 设置为400s
+    maximum-pool-size: 30
+    minimum-idle: 10
+    pool-name: HikariCP
+    validation-timeout: 1000
+
+#mybatis:
+#  configuration:
+#    map-underscore-to-camel-case: true
+#  #mapper?xml?????
+#  mapper-locations: classpath:mapper/*.xml
+#  ##不设置包,找不到那个user类,传入参数的选择,就是insert标签的parameterType
+#  type-aliases-package: org.assistant.model.entity
+

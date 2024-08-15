@@ -1,0 +1,43 @@
+
+spring:
+  datasource:
+    type: com.zaxxer.hikari.HikariDataSource
+#    testWhileIdle : true
+#    testOnBorrow : true
+    url: jdbc:postgresql://114.132.67.226:5432/assistant_product
+    username: root
+    password: abC123456@
+
+  hikari:
+    auto-commit: true
+    connection-test-query: SELECT 1
+    connection-timeout: 10000
+    idle-timeout: 30000
+    max-lifetime: 400000 # 设置为400s
+    maximum-pool-size: 30
+    minimum-idle: 10
+    pool-name: HikariCP
+    validation-timeout: 1000
+
+  data:
+    redis:
+      host: localhost     # Redis服务器地址
+      port: 6379          # Redis服务器连接端口
+      password: 123456    # Redis服务器连接密码（默认为空）
+      database: 0         # Redis数据库索引（默认为0）
+      timeout: 60s        # 连接空闲超过N(s秒、ms毫秒，不加单位时使用毫秒)后关闭，0为禁用，这里配置值和tcp-keepalive值一致
+      # Lettuce连接池配置
+      lettuce:
+        pool:
+          max-active: 10  # 允许最大连接数，默认8（负值表示没有限制），推荐值：大于cpu * 2，通常为(cpu * 2) + 2
+          max-idle: 8     # 最大空闲连接数，默认8，推荐值：cpu * 2
+          min-idle: 0     # 最小空闲连接数，默认0
+          max-wait: 5s    # 连接用完时，新的请求等待时间(s秒、ms毫秒)，超过该时间抛出异常，默认-1（负值表示没有限制）
+#mybatis:
+#  configuration:
+#    map-underscore-to-camel-case: true
+#  #mapper?xml?????
+#  mapper-locations: classpath:mapper/*.xml
+#  ##不设置包,找不到那个user类,传入参数的选择,就是insert标签的parameterType
+#  type-aliases-package: org.assistant.model.entity
+
