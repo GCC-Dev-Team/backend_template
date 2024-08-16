@@ -1,6 +1,20 @@
 spring:
   profiles:
     active: dev
+  config:
+    import:
+      - classpath:application-common.yml
+#cache:
+#  useRedis: true
+#
+#jwt-x:
+#  secret: "xiaoli"
+#  expiration: 259200
+#  refresh: 10800
+#login:
+#  limit: 15
+#  num: 10
+#  salt: xiaoli
 #logging:
 #  level:
 #    org.springframework.web: info
