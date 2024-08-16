@@ -3,13 +3,13 @@
 #    active: dev
 #server:
 #  port: 3002
-
+##
 cache:
-  useRedis: true
+  useRedis: true #是否使用redis,如果使用请自动加入redis参数
 jwt-x:
   secret: "xiaoli"
-  expiration: 259200
-  refresh: 10800
+  expiration: 259200 #过期时间 单位s
+  refresh: 10800 #刷新时间 单位s
 login:
   limit: 15
   num: 10
