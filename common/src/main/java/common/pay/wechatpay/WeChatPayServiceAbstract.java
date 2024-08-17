@@ -55,7 +55,8 @@ public abstract class WeChatPayServiceAbstract {
     }
 
     /**
-     * 更新微信支付配置
+     * 更新微信支付配置(初始化微信支付配置,默认配置)
+     * 结合WeChatPayConfig的构造方法使用
      */
     @PostConstruct
     public abstract void wxPayConfigInit();
