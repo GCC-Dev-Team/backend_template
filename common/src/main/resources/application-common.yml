@@ -11,6 +11,6 @@ jwt-x:
   expiration: 259200 #过期时间 单位s
   refresh: 10800 #刷新时间 单位s
 login:
-  limit: 15
-  num: 10
-  salt: xiaoli
+  limit: 15 #限制时间
+  num: 10 #错误登陆次数
+  salt: xiaoli #加密密钥(盐)

@@ -20,15 +20,20 @@ spring:
 #    org.springframework.web: info
 #    com.github.binarywang.demo.wx.miniapp: debug
 #    cn.binarywang.wx.miniapp: debug
-#wx:
-#  miniapp:
-#    configs:
-#      - appid: wx03e1004904ac4ca6
-#        secret: 12da55786474ecd91f0dadfed67a2786
-#        token: xiaoli
-#        aesKey: xiaoli
-#        msgDataFormat: JSON
+wx:
+  miniapp:
+    configs:
+      - appid: wx03e1004904ac4ca6
+        secret: 12da55786474ecd91f0dadfed67a2786
+        token: xiaoli
+        aesKey: yigJeVP55QrJi0RTRbleWsjVuWsiM7YkioIuSQVkwrH
+        msgDataFormat: JSON
+      - appid: wx631bad2c8989c5fc
+        secret: c1ae68c069823b3172221f110034c0eb
+        token: xiaoli
+        aesKey: yigJeVP55QrJi0RTRbleWsjVuWsiM7YkioIuSQVkwrH
+        msgDataFormat: JSON
 
     ##支付配置读取进去数据库了
 server:
-  port: 3003
+  port: 80
