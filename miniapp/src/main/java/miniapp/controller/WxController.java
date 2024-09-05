@@ -18,15 +18,6 @@ public class WxController {
     private final WxMaService wxMaService;
     @GetMapping("/user")
     WebResponse<String> getString() throws WxErrorException {
-//        WxMaGenerateSchemeRequest.JumpWxa.JumpWxaBuilder jumpWxaBuilder = WxMaGenerateSchemeRequest.JumpWxa.newBuilder();
-//
-//        jumpWxaBuilder.path("pages/PDFProject/DocumentLibraryPage/index");
-//        jumpWxaBuilder.query("Order=123456");
-//
-//        WxMaGenerateSchemeRequest wxMaGenerateSchemeRequest = WxMaGenerateSchemeRequest.newBuilder().build();
-//
-//        wxMaGenerateSchemeRequest.setJumpWxa(jumpWxaBuilder.build());
-
 
         GenerateUrlLinkRequest generateUrlLinkRequest = new GenerateUrlLinkRequest();
         generateUrlLinkRequest.setPath("pages/PDFProject/DocumentLibraryPage/index");
