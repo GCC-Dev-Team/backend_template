@@ -39,4 +39,20 @@ public class WxController {
         return WebResponse.success(generate);
 
     }
+
+    @GetMapping("/jumpPage")
+    WebResponse<String> getJumpPage(String orderId) throws WxErrorException {
+        WxMaGenerateSchemeRequest.JumpWxa.JumpWxaBuilder jumpWxaBuilder = WxMaGenerateSchemeRequest.JumpWxa.newBuilder();
+
+        jumpWxaBuilder.path("pages/PDFProject/DocumentLibraryPage/index");
+        jumpWxaBuilder.query("orderId"+orderId);
+
+        WxMaGenerateSchemeRequest wxMaGenerateSchemeRequest = WxMaGenerateSchemeRequest.newBuilder().build();
+
+        wxMaGenerateSchemeRequest.setJumpWxa(jumpWxaBuilder.build());
+
+        String generate = wxMaService.getWxMaSchemeService().generate(wxMaGenerateSchemeRequest);
+
+        return WebResponse.success(generate);
+    }
 }

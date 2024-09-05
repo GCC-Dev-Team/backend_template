@@ -20,7 +20,7 @@ class DemoTests {
         WxMaGenerateSchemeRequest.JumpWxa.JumpWxaBuilder jumpWxaBuilder = WxMaGenerateSchemeRequest.JumpWxa.newBuilder();
 
         jumpWxaBuilder.path("pages/PDFProject/DocumentLibraryPage/index");
-        jumpWxaBuilder.query("Order=123456");
+        jumpWxaBuilder.query("order=TFHYCS-1825843520137592832");
 
         WxMaGenerateSchemeRequest wxMaGenerateSchemeRequest = WxMaGenerateSchemeRequest.newBuilder().build();
 

@@ -7,12 +7,17 @@ import cn.binarywang.wx.miniapp.bean.WxMaMessage;
 import cn.binarywang.wx.miniapp.builder.LinkMessageBuilder;
 import cn.binarywang.wx.miniapp.message.WxMaMessageHandler;
 import cn.binarywang.wx.miniapp.message.WxMaXmlOutMessage;
+import cn.hutool.core.util.StrUtil;
 import me.chanjar.weixin.common.error.WxErrorException;
 import me.chanjar.weixin.common.session.WxSessionManager;
 
+import miniapp.utils.PhotoTaskUtils;
+import miniapp.utils.TextTaskUtils;
+import org.apache.commons.lang3.StringUtils;
 import org.springframework.stereotype.Component;
 
 import java.util.Map;
+import java.util.Timer;
 
 /**
  * @author <a href="https://github.com/binarywang">Binary Wang</a>
